@@ -57,6 +57,58 @@ namespace Notepad
                 Console.WriteLine(Ex.ToString());
             }
         }
+
+        public void deleteFile()
+        {
+            Display dp = new Display();
+            Console.WriteLine("Select the folder from where you want to delete file.");
+            Console.WriteLine("1. C:\\TextFiles");
+            Console.WriteLine("2. C:\\YourName");
+            int chk;
+            chk = Convert.ToInt32(Console.ReadLine());
+
+
+            if (chk == 1)
+            {
+                string filePath = @"C:\TextFiles\";
+                string[] files = Directory.GetFiles(filePath);
+                Console.WriteLine("\n\nThese are the following files available to delete.");
+                foreach (string file in files)
+                    Console.WriteLine(Path.GetFileName(file));
+                Console.Write("Enter file name : ");
+                string fileName = Console.ReadLine();
+                if (File.Exists(filePath + fileName+".txt"))
+                {
+                    File.Delete(filePath + fileName + ".txt");
+                }
+                dp.displayMainMenu();
+
+            }
+            else if (chk == 2)
+            {
+                Console.Write("Enter Folder Name : ");
+                string folderName = Console.ReadLine();
+                string filePath = @"C:\" + folderName + @"\";
+                string[] files = Directory.GetFiles(filePath);
+                Console.WriteLine("\n\nThese are the following files available to delete.");
+                foreach (string file in files)
+                    Console.WriteLine(Path.GetFileName(file));
+                Console.Write("Enter file name : ");
+                string fileName = Console.ReadLine();
+                if (File.Exists(filePath+fileName+".txt"))
+                {
+                    File.Delete(filePath + fileName+".txt");
+                }
+                dp.displayMainMenu();
+            }
+            else
+            {
+                Console.WriteLine("Wrong option.");
+                dp.displayMainMenu();
+            }
+            
+            
+        }
     }
 
 
@@ -118,7 +170,6 @@ namespace Notepad
         
     class Display
     {
-        MakeFile makeFile = new MakeFile();
         public void displayMainMenu()
         {
             Console.WriteLine("**********************************************");
@@ -130,7 +181,8 @@ namespace Notepad
             Console.WriteLine("****       1. Create new text file        ****");
             Console.WriteLine("****       2. Open text file              ****");
             Console.WriteLine("****       3. Help(Make sure you read once)***");
-            Console.WriteLine("****       4. Exit                        ****");
+            Console.WriteLine("****       4. Delete file                 ****");
+            Console.WriteLine("****       5. Exit                        ****");
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine("**********************************************");
             Console.WriteLine("**********************************************");
@@ -153,8 +205,13 @@ namespace Notepad
                         displayHelp();
                         displayMainMenu();
                         break;
-                        
+
                     case 4:
+                        MakeFile mk = new MakeFile();
+                        mk.deleteFile();
+                        break;
+
+                    case 5:
                         Console.WriteLine("Exiting....");
                         Environment.Exit(0);
                         break;
@@ -341,6 +398,8 @@ namespace Notepad
             Console.WriteLine("----------------------------------------------");
             Console.Write("Choose Option : ");
             string filePath = @"C:\TextFiles\";
+            MakeFile makeFile = new MakeFile();
+
             while (true)
             {
                 int option = Int32.Parse(Console.ReadLine());
