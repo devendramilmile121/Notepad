@@ -1,0 +1,11 @@
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\bin\Debug\netcoreapp2.1\Notepad.deps.json
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\bin\Debug\netcoreapp2.1\Notepad.runtimeconfig.json
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\bin\Debug\netcoreapp2.1\Notepad.runtimeconfig.dev.json
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\bin\Debug\netcoreapp2.1\Notepad.dll
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\bin\Debug\netcoreapp2.1\Notepad.pdb
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\obj\Debug\netcoreapp2.1\Notepad.csprojAssemblyReference.cache
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\obj\Debug\netcoreapp2.1\Notepad.csproj.CoreCompileInputs.cache
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\obj\Debug\netcoreapp2.1\Notepad.AssemblyInfoInputs.cache
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\obj\Debug\netcoreapp2.1\Notepad.AssemblyInfo.cs
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\obj\Debug\netcoreapp2.1\Notepad.dll
+C:\Users\devendra.milmile\source\repos\Notepad\Notepad\obj\Debug\netcoreapp2.1\Notepad.pdb
